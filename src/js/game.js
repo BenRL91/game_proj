@@ -1,6 +1,6 @@
 import $ from 'jquery';
 import GameElement from './gameElement';
-import {HEIGHT, WIDTH} from './game_info';
+
 
 export default class Game extends GameElement {
 	constructor(){

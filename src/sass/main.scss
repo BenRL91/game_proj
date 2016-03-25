@@ -1,6 +1,22 @@
 /* CSS Entry Point */
 .game {
 	background: black;
-	margin: auto;
+	// margin: auto;
 	position: relative;
 }
+
+.ball {
+	background: white;
+	position: absolute;
+	// transition: all .1s;
+	border-radius: 30px;
+}
+
+.leftPaddle {
+	background: white;
+	position: absolute;
+}
+.rightPaddle {
+	background: white;
+	position: absolute;
+};

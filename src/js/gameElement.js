@@ -1,5 +1,5 @@
 import $ from 'jquery';
-
+//Create a base blueprint for all elements in the game.//
 export default class GameElement {
 	constructor(){
 		//class

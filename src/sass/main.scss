@@ -2,6 +2,7 @@
 .game {
 	background: black;
 	// margin: auto;
+	border: 1px solid black;
 	position: relative;
 }
 
@@ -9,7 +10,7 @@
 	background: white;
 	position: absolute;
 	// transition: all .1s;
-	border-radius: 30px;
+	// border-radius: 30px;
 }
 
 .leftPaddle {

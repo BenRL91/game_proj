@@ -12,7 +12,6 @@
 	// transition: all .1s;
 	// border-radius: 30px;
 }
-
 .leftPaddle {
 	background: white;
 	position: absolute;
@@ -21,3 +20,18 @@
 	background: white;
 	position: absolute;
 };
+.leftScore {
+	color: white;
+	position: absolute;
+	font-size: 40px;
+}
+.rightScore {
+	color: white;
+	position: absolute;
+	font-size: 40px;
+}
+.end {
+	height: 502px;
+	width: 1002px;
+	background: red;
+}

@@ -2,14 +2,14 @@ import $ from 'jquery';
 import GameElement from './gameElement';
 import {HEIGHT, WIDTH} from './game_info';
 
-const SPEED = 1
+const SPEED = 2
 
 export default class Ball extends GameElement {
 	constructor(){
 		super();
 		this.setDimensions([20, 20]);
 		this.setCoordinates([WIDTH/2, HEIGHT/2]);
-		this.direction = Math.random() * Math.PI * 2;
+		this.direction = Math.PI/9;
 		this.class = 'ball';
 		this.rightSide = this.trackRightSide()
 		this.leftSide = this.trackLeftSide()
@@ -19,7 +19,7 @@ export default class Ball extends GameElement {
 		var [x, y] = this.getCoordinates();
     x += Math.sin(this.direction) * SPEED;
     y -= Math.cos(this.direction) * SPEED;
-
+//I use 180 - angle if angle < 180, and 360 - angle if angle >= 180.
     if (y > HEIGHT) {
 		this.direction = 1/this.direction;
 	   }

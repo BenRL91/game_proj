@@ -28,5 +28,8 @@
     "babelify": "^7.2.0",
     "jquery": "^2.2.2",
     "node-sass": "^3.4.2"
+  },
+  "dependencies": {
+    "lodash": "^4.6.1"
   }
 }

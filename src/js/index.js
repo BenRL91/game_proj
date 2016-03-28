@@ -96,10 +96,10 @@ function displayEndScreen(player){
 	clearInterval(running)
 };
 function endGame(){
-if (s1 === 3){
+if (s1 === 6){
 	player = 'Player 1'
 	displayEndScreen(player);
-}else if (s2 === 3){
+}else if (s2 === 6){
 	player = 'Player 2'
 	displayEndScreen(player);
 	};

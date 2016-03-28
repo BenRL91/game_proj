@@ -19,7 +19,7 @@ export default class Ball extends GameElement {
 		var [x, y] = this.getCoordinates();
     x += Math.sin(this.direction) * SPEED;
     y -= Math.cos(this.direction) * SPEED;
-//I use 180 - angle if angle < 180, and 360 - angle if angle >= 180.
+
     if (y > HEIGHT) {
 		this.direction = 1/this.direction;
 	   }

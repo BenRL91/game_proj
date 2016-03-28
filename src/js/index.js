@@ -24,8 +24,8 @@ var running = setInterval(()=>{
 	ball.trackRightSide();
 	leftPaddle.trackRightSide();
 	rightPaddle.trackLeftSide();
-	moveLeft(ball.trackRightSide(), rightPaddle.trackLeftSide())
-	moveRight(ball.trackLeftSide(), leftPaddle.trackRightSide())
+	moveLeft(ball.trackRightSide(), rightPaddle.trackLeftSide());
+	moveRight(ball.trackLeftSide(), leftPaddle.trackRightSide());
 	scorePoint();
 	endGame();
 	if (ball.isMoving()){
@@ -47,16 +47,16 @@ $scoreL.html('0');
 $scoreR.html('0');
 
 function scorePoint(){
-	var [x, y] = ball.trackLeftSide()
-	var [a, b] = ball.getCoordinates()
+	var [x, y] = ball.trackLeftSide();
+	var [a, b] = ball.getCoordinates();
 	if(x > 1000){
 		$scoreL.html(`${s1++}`);
-		ball.setCoordinates([500, 250])
+		ball.setCoordinates([500, 250]);
 	}else if(x < 0){
-		$scoreR.html(`${s2++}`)
-		ball.setCoordinates([500, 250])
-	}
-}
+		$scoreR.html(`${s2++}`);
+		ball.setCoordinates([500, 250]);
+	};
+};
 
 
 
@@ -64,37 +64,37 @@ $(document).on('keyup' || 'keydown', event => {
   // console.log('keyup', event.keyCode);
   var key = event.keyCode;
   if (key === 32) {
-    //spacebar
+    //spacebar//
     ball.isMoving()
-	}
+	};
   if(key === 87){
   	leftPaddle.moveUp();
-  }
+  };
   if(key === 83){
   	leftPaddle.moveDown();
-  }
+  };
   if(key === 38){
   	rightPaddle.moveUp();
-  }
+  };
   if(key === 40){
   	rightPaddle.moveDown();
-  }
+  };
 });
 
 function moveLeft([a, b], [x, y]){
 	if (a > x && (b >= (y - 101)) && b <= y){
 		ball.direction = -(ball.direction);
-	}
-}
+	};
+};
 function moveRight([a, b],[x, y]){
 	if (a < x && (b >= (y - 101)) && b <= y){
 		ball.direction = -(ball.direction);
-	}
-}
+	};
+};
 function displayEndScreen(player){
 	document.write(player + ' WON! Refresh the page to play again!')
 	clearInterval(running)
-}
+};
 function endGame(){
 if (s1 === 3){
 	player = 'Player 1'
@@ -102,5 +102,5 @@ if (s1 === 3){
 }else if (s2 === 3){
 	player = 'Player 2'
 	displayEndScreen(player);
-	}
-}
+	};
+};
